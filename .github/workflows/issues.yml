@@ -7,7 +7,7 @@ jobs:
   respond:
     runs-on: ubuntu-latest
     steps:
-      - uses: KionX/AIHint@v1.0
+      - uses: KionX/AIHint@main
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           ISSUE_NUMBER: ${{github.event.issue.number}}
