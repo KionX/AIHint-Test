@@ -1,0 +1,15 @@
+name: AI Issue Hint
+on:
+  issues:
+    types: [opened, edited]
+
+jobs:
+  respond:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: KionX/AIHint@v1.0
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          ISSUE_NUMBER: ${{github.event.issue.number}}
+          AI_TOKEN: ${{secrets.GAI_TOKEN}}
+          SEARCH_REPO: FAForever/fa
